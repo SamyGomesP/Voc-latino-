@@ -1,0 +1,70 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+body {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+	background: linear-gradient(to top, lightblue, lightgreen);
+}
+.box {
+	text-align: center;
+	padding: 2rem;
+	border-radius: 20px;
+	box-shadow: 0px 5px 10px rgba(0,0,0, 0.5);
+	max-width: 300px;
+	height: 290px; 
+}
+.form {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+}
+.form input {
+	all: unset;
+	border-bottom: 1px solid black;
+	padding: 5px;
+}
+.form button {
+	all: unset;
+	background: linear-gradient(to left top, white, lightgray, white);
+	border: 1px solid rgba(0,0,0, 0.2);
+	border-radius: 15px;
+	display: block;
+	padding: 0.4rem 1.5rem;
+	font-weight: 600;
+	font-size: 16px;
+	margin: auto;
+}
+.form button:active {
+	box-shadow: inset 0px 2px 6px rgba(0,0,0, 0.3);
+}
+.form #resposta {
+	font-weight: lighter;
+}
+.box::before {
+	content: '';
+	display: inline-block;
+	background-image: url('/home/samila/SITES/PAÍS/planeta.webp');
+	filter: drop-shadow(-3px 10px 10px rgba(0,0,0, 0.4));
+	background-size: cover;
+	background-color: transparent;
+	background-position: center;
+	background-repeat: no-repeat;
+	width: 50px; height: 50px;
+	margin: 0 auto;
+	position: relative;
+	top: -10px;
+	animation: world 5s ease-out infinite; 
+}
+@keyframes world {
+	0%, 100% {
+		transform: translateY(0);
+	}
+	50% {
+		transform: translateY(-5px);
+		
+	}
+}

@@ -1,0 +1,143 @@
+<!doctype html>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<link rel="stylesheet" href="what-country.css">
+</head>
+<html>
+	<body>
+		<div class="box">
+			<div class="form">
+				<h2>Você é sul-americano?<br>
+				Vamos descobrir</h2>
+				<input type="text" id="pais" placeholder="Qual seu país de nascença?">
+				<button>Verificar</button>
+				<p id="resposta"></p>
+			</div>
+		</div>
+	</body>
+	<script>
+		let pais = document.getElementById("pais");
+		let avancar = document.getElementsByTagName('button')[0];
+		let resposta = document.getElementById("resposta");
+		let box = document.getElementsByClassName("box")[0];
+		avancar.addEventListener('click', clicar);
+		
+		function clicar() {
+			box.style.backdropFilter = "blur(20px)"; 
+			let lugar = pais.value.toUpperCase();
+			switch (lugar) {
+				case "":
+				resposta.innerHTML = "INSIRA UM PAÍS!";
+				break;
+				
+				case "BRASIL":
+				resposta.innerHTML = `JUNTOS SOMOS AMÉRICA!<br> VOCÊ É DO ${lugar} <br> E TAMBÉM SUL-AMERICANO!`; 
+				document.body.style.backgroundImage = 'url(/home/samila/SITES/PAÍS/brasil.webp';
+				document.body.style.backgroundSize = "cover";
+				document.body.style.backgroundPosition = "center center";
+				pais.value = "";
+				break;
+			
+				case "COLOMBIA":
+				case "COLÔMBIA":
+				resposta.innerHTML = `JUNTOS SOMOS AMÉRICA!<br> VOCÊ É DO ${lugar} <br> E TAMBÉM SUL-AMERICANO!`;
+				document.body.style.backgroundImage = 'url(/home/samila/SITES/PAÍS/colombia.jpg)';
+				document.body.style.backgroundSize = "cover";
+				pais.value = "";
+				break;
+				
+				case "PERU":
+				resposta.innerHTML = `JUNTOS SOMOS AMÉRICA!<br> VOCÊ É DO ${lugar} <br> E TAMBÉM SUL-AMERICANO!`;
+				document.body.style.backgroundImage = 'url(/home/samila/SITES/PAÍS/peru.jpg)';
+				document.body.style.backgroundSize = "cover";
+				pais.value = "";
+				break;
+				
+				
+				case "VENEZUELA":
+				resposta.innerHTML = `JUNTOS SOMOS AMÉRICA!<br> VOCÊ É DA ${lugar} <br> E TAMBÉM SUL-AMERICANO!`;
+				document.body.style.backgroundImage = 'url(/home/samila/SITES/PAÍS/venezuela.jpg)';
+				document.body.style.backgroundSize = "cover";
+				document.body.style.backgroundPosition = "center center";
+				pais.value = "";
+				break;
+			
+				case "ARGENTINA":
+				resposta.innerHTML = `JUNTOS SOMOS AMÉRICA!<br> VOCÊ É DA ${lugar} <br> E TAMBÉM SUL-AMERICANO!`;
+				document.body.style.backgroundImage = 'url(/home/samila/SITES/PAÍS/argentina.jpg)';
+				document.body.style.backgroundSize = "cover";
+				document.body.style.backgroundPosition = "center center";
+				pais.value = "";
+				break;
+				
+				case "BOLIVIA":
+				case "BOLÍVIA":
+				resposta.innerHTML = `JUNTOS SOMOS AMÉRICA!<br> VOCÊ É DA ${lugar} <br> E TAMBÉM SUL-AMERICANO!`;
+				document.body.style.backgroundImage = 'url(/home/samila/SITES/PAÍS/bolivia.jpg)';
+				document.body.style.backgroundSize = "cover";
+				document.body.style.backgroundPosition = "center center";
+				pais.value = "";
+				break;
+				
+				case "CHILE":
+				resposta.innerHTML = `JUNTOS SOMOS AMÉRICA!<br> VOCÊ É DO ${lugar} <br> E TAMBÉM SUL-AMERICANO!`;
+				document.body.style.backgroundImage = 'url(/home/samila/SITES/PAÍS/chile.jpg)';
+				document.body.style.backgroundSize = "cover";
+				document.body.style.backgroundPosition = "center center";
+				pais.value = "";
+				break;
+				
+				case "EQUADOR":
+				resposta.innerHTML = `JUNTOS SOMOS AMÉRICA!<br> VOCÊ É DO ${lugar} <br> E TAMBÉM SUL-AMERICANO!`;
+				document.body.style.backgroundImage = 'url(/home/samila/SITES/PAÍS/equador.jpg)';
+				document.body.style.backgroundSize = "cover";
+				document.body.style.backgroundPosition = "center center";
+				pais.value = "";
+				break;
+		
+				case "PARAGUAI":
+				resposta.innerHTML = `JUNTOS SOMOS AMÉRICA!<br> VOCÊ É DO ${lugar} <br> E TAMBÉM SUL-AMERICANO!`;
+				document.body.style.backgroundImage = 'url(/home/samila/SITES/PAÍS/paraguai.jpg)';
+				document.body.style.backgroundSize = "cover";
+				document.body.style.backgroundPosition = "center center";
+				pais.value = "";
+				break;
+				
+				case "URUGUAI":
+				resposta.innerHTML = `JUNTOS SOMOS AMÉRICA!<br> VOCÊ É DO ${lugar} <br> E TAMBÉM SUL-AMERICANO!`;
+				document.body.style.backgroundImage = 'url(/home/samila/SITES/PAÍS/uruguai.jpg)';
+				document.body.style.backgroundSize = "cover";
+				document.body.style.backgroundPosition = "center center";
+				pais.value = "";
+				break;
+				
+				case "SURINAME":
+				resposta.innerHTML = `JUNTOS SOMOS AMÉRICA!<br> VOCÊ É DO ${lugar} <br> E TAMBÉM SUL-AMERICANO!`;
+				document.body.style.backgroundImage = 'url(/home/samila/SITES/PAÍS/suriname.jpg)';
+				document.body.style.backgroundSize = "cover";
+				document.body.style.backgroundPosition = "center center";
+				pais.value = "";
+				break;
+				
+				case "GUIANA":
+				resposta.innerHTML = `JUNTOS SOMOS AMÉRICA!<br> VOCÊ É DA ${lugar} <br> E TAMBÉM SUL-AMERICANO!`;
+				document.body.style.backgroundImage = 'url(/home/samila/SITES/PAÍS/guiana.jpg)';
+				document.body.style.backgroundSize = "cover";
+				document.body.style.backgroundPosition = "center center";
+				pais.value = "";
+				break;
+				
+				default:
+				resposta.innerHTML = `OPS! O PAÍS ${lugar} NÃO FAZ PARTE DA AMÉRICA DO SUL!`;
+				document.body.style.background = "linear-gradient(to left top, lightgreen, lightblue)";
+			
+								
+			}
+		}
+		
+	</script>
+</html>
+
