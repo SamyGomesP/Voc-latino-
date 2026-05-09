@@ -47,7 +47,7 @@ body {
 .box::before {
 	content: '';
 	display: inline-block;
-	background-image: url('/home/samila/SITES/PAÍS/planeta.webp');
+	background-image: url('planeta.webp');
 	filter: drop-shadow(-3px 10px 10px rgba(0,0,0, 0.4));
 	background-size: cover;
 	background-color: transparent;
